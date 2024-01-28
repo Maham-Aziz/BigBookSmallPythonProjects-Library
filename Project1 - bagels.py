@@ -16,7 +16,6 @@ import random
 
 numb = random.randrange(100,1000)
 
-
 guess_count = 0
 sim_count = 0
 while guess_count <= 10:
@@ -32,8 +31,8 @@ while guess_count <= 10:
         for x in str(numb):
             if x in str(guess):
                 print("")
-            if not:
-                print(
+            else:
+                print("")
             str_guess = str(guess)
             find = str_guess.count(x)
             if find == 1:
