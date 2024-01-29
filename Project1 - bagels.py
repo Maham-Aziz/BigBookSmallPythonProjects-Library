@@ -16,11 +16,10 @@ import random
 
 numb = random.randrange(100,1000)
 numb = str(numb)
-print(numb)
 print()
 
 guess_count = 0
-while guess_count <= 10:
+while guess_count <= 9:
     final = []
     n_list = []
     g_list = []
@@ -29,6 +28,7 @@ while guess_count <= 10:
         print("You got it!")
         repeat = input("Do you want to play again? (yes or no)")
         if repeat == 'yes':
+            guess_count = 0
             continue
         else:
             exit()
@@ -40,29 +40,20 @@ while guess_count <= 10:
         if n_list[0] in g_list:
             if n_list[0] == g_list[0]:
                 final.append("Fermi")
-                print(final)
             else:
                 final.append("Pico")
-                print(final)
         if n_list[1] in g_list:
             if n_list[1] == g_list[1]:
                 final.append("Fermi")
-                print(final)
             else:
                 final.append("Pico")
-                print(final)
         if n_list[2] in g_list:
             if n_list[2] == g_list[2]:
                 final.append("Fermi")
-                print(final)
             else:
                 final.append("Pico")
-                print(final)
     if final == []:
         final.append("Bagels")
-        print(final)
 
-    for x in final:
-        print(x)
     print(final)
     guess_count +=1
