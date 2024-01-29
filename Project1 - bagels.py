@@ -15,9 +15,11 @@ print()
 import random
 
 numb = random.randrange(100,1000)
+print(numb)
 
 guess_count = 0
 sim_count = 0
+aa = 0
 while guess_count <= 10:
     guess = int(input("Please enter you number guess: "))
     if guess == numb:
@@ -28,24 +30,36 @@ while guess_count <= 10:
         else:
             exit()
     else:
-        for x in str(numb):
-            if x in str(guess):
-                print("")
-            else:
-                print("")
-            str_guess = str(guess)
-            find = str_guess.count(x)
-            if find == 1:
-                str(numb)
-                find_numb = numb.find(x)
-                find_guess = guess.find(x)
-                if find_numb == find_guess:
-                    print("Fermi")
+        for x in lst(numb):
+            if x in lst(guess):
+                aa += 1
+                if aa == 1:
+                    index1 = numb.index(x)
+                    index2 = guess.index(x)
+                    if index1 == index2:
+                        print("Fermi")
+                    else:
+                        print("Pico")
                 else:
-                    print("Pico")
-            elif find == 0:
+                    print("Bagels")
+            else:
                 print("Bagels")
-    guess_count += 1
+                
+            #else:
+                #print("")
+            #str_guess = str(guess)
+            #find = str_guess.count(x)
+            #if find == 1:
+            #    str(numb)
+            #    find_numb = numb.find(x)
+            #    find_guess = guess.find(x)
+            #    if find_numb == find_guess:
+            #        print("Fermi")
+            #    else:
+            #        print("Pico")
+            #elif find == 0:
+            #    print("Bagels")
+   # guess_count += 1
 
                 
                 
