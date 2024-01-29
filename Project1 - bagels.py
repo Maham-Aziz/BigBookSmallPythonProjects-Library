@@ -15,13 +15,15 @@ print()
 import random
 
 numb = random.randrange(100,1000)
+numb = str(numb)
 print(numb)
+print()
 
 guess_count = 0
 sim_count = 0
 aa = 0
 while guess_count <= 10:
-    guess = int(input("Please enter you number guess: "))
+    guess = input("Please enter you number guess: ")
     if guess == numb:
         print("You got it!")
         repeat = input("Do you want to play again? (yes or no)")
@@ -30,9 +32,11 @@ while guess_count <= 10:
         else:
             exit()
     else:
-        for x in lst(numb):
-            if x in lst(guess):
+        for x in numb:
+            print(x)
+            if x in guess:
                 aa += 1
+                print(aa + 101)
                 if aa == 1:
                     index1 = numb.index(x)
                     index2 = guess.index(x)
@@ -44,6 +48,7 @@ while guess_count <= 10:
                     print("Bagels")
             else:
                 print("Bagels")
+    guess_count += 1    
                 
             #else:
                 #print("")
