@@ -1,5 +1,6 @@
-### BBSMP- bagels.py
-### project #1
+### BBSMP- Bagels.py
+### Project 1
+### Maham Aziz
 ### Januray 26, 2024
 
 print("I am thinking of a 3-digit number between 100 and 999. Try to guess what it is.")
